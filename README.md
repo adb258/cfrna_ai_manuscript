@@ -1,4 +1,4 @@
-Code and associated for: Banchmarking large language models for cell-free RNA diagnostic biomarker discovery
+Code and associated for: Benchmarking large language models for cell-free RNA diagnostic biomarker discovery
 
 Directories:
 1. Code - all jupyter notebooks used for data analysis and figure generation
