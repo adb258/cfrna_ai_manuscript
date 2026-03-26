@@ -1,0 +1,85 @@
+R version 4.4.1 (2024-06-14)
+Platform: aarch64-apple-darwin20
+Running under: macOS 26.3
+
+Matrix products: default
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: America/New_York
+tzcode source: internal
+
+attached base packages:
+[1] grid      stats4    stats     graphics  grDevices utils    
+[7] datasets  methods   base     
+
+other attached packages:
+ [1] gridExtra_2.3               scales_1.4.0               
+ [3] eulerr_7.0.4                circlize_0.4.17            
+ [5] reshape2_1.4.5              ggpubr_0.6.3               
+ [7] tidytext_0.4.3              patchwork_1.3.2            
+ [9] ComplexHeatmap_2.20.0       edgeR_4.2.2                
+[11] DESeq2_1.44.0               SummarizedExperiment_1.34.0
+[13] MatrixGenerics_1.16.0       matrixStats_1.5.0          
+[15] GenomicRanges_1.56.2        GenomeInfoDb_1.40.1        
+[17] limma_3.60.6                org.Hs.eg.db_3.19.1        
+[19] GSEABase_1.66.0             graph_1.82.0               
+[21] annotate_1.82.0             XML_3.99-0.23              
+[23] AnnotationDbi_1.66.0        IRanges_2.38.1             
+[25] S4Vectors_0.42.1            Biobase_2.64.0             
+[27] BiocGenerics_0.50.0         GSVA_1.52.3                
+[29] lubridate_1.9.5             forcats_1.0.1              
+[31] stringr_1.6.0               purrr_1.2.1                
+[33] readr_2.2.0                 tidyr_1.3.2                
+[35] tibble_3.3.1                ggplot2_4.0.2              
+[37] tidyverse_2.0.0             dplyr_1.2.0                
+[39] magrittr_2.0.4             
+
+loaded via a namespace (and not attached):
+ [1] DBI_1.3.0                   rlang_1.1.7                
+ [3] clue_0.3-67                 GetoptLong_1.1.0           
+ [5] compiler_4.4.1              RSQLite_2.4.6              
+ [7] png_0.1-9                   vctrs_0.7.2                
+ [9] shape_1.4.6.1               pkgconfig_2.0.3            
+[11] SpatialExperiment_1.14.0    crayon_1.5.3               
+[13] fastmap_1.2.0               backports_1.5.0            
+[15] magick_2.9.1                XVector_0.44.0             
+[17] tzdb_0.5.0                  UCSC.utils_1.0.0           
+[19] bit_4.6.0                   zlibbioc_1.50.0            
+[21] cachem_1.1.0                beachmat_2.20.0            
+[23] jsonlite_2.0.0              blob_1.3.0                 
+[25] SnowballC_0.7.1             rhdf5filters_1.16.0        
+[27] DelayedArray_0.30.1         Rhdf5lib_1.26.0            
+[29] BiocParallel_1.38.0         broom_1.0.12               
+[31] cluster_2.1.8.2             irlba_2.3.7                
+[33] parallel_4.4.1              R6_2.6.1                   
+[35] stringi_1.8.7               RColorBrewer_1.1-3         
+[37] car_3.1-5                   iterators_1.0.14           
+[39] Rcpp_1.1.1                  Matrix_1.7-5               
+[41] timechange_0.4.0            tidyselect_1.2.1           
+[43] rstudioapi_0.18.0           abind_1.4-8                
+[45] doParallel_1.0.17           codetools_0.2-20           
+[47] plyr_1.8.9                  lattice_0.22-9             
+[49] withr_3.0.2                 KEGGREST_1.44.1            
+[51] S7_0.2.1                    Biostrings_2.72.1          
+[53] pillar_1.11.1               carData_3.0-6              
+[55] janeaustenr_1.0.0           foreach_1.5.2              
+[57] generics_0.1.4              hms_1.1.4                  
+[59] sparseMatrixStats_1.16.0    xtable_1.8-8               
+[61] glue_1.8.0                  tools_4.4.1                
+[63] tokenizers_0.3.0            ScaledMatrix_1.12.0        
+[65] ggsignif_0.6.4              locfit_1.5-9.12            
+[67] rhdf5_2.48.0                colorspace_2.1-2           
+[69] SingleCellExperiment_1.26.0 GenomeInfoDbData_1.2.12    
+[71] BiocSingular_1.20.0         HDF5Array_1.32.1           
+[73] Formula_1.2-5               cli_3.6.5                  
+[75] rsvd_1.0.5                  S4Arrays_1.4.1             
+[77] gtable_0.3.6                rstatix_0.7.3              
+[79] digest_0.6.39               SparseArray_1.4.8          
+[81] rjson_0.2.23                farver_2.1.2               
+[83] memoise_2.0.1               lifecycle_1.0.5            
+[85] httr_1.4.8                  GlobalOptions_0.1.3        
+[87] statmod_1.5.1               bit64_4.6.0-1
