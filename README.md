@@ -49,7 +49,8 @@ Download and install R ≥ 4.3.0 from [CRAN](https://cran.r-project.org/).
 install.packages(c(
   "magrittr", "dplyr", "tidyverse", "tidyr", "tibble",
   "stringr", "purrr", "broom", "matrixStats",
-  "patchwork", "tidytext", "ggpubr"
+  "patchwork", "tidytext", "ggpubr",
+  "caret", "randomForest", "extraTrees", "glmnet", "nnet"
 ))
 ```
 
