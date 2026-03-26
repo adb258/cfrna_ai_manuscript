@@ -188,7 +188,7 @@ Registration with MSigDB (free) is required to download these files.
 ## Public Data Availability
 
 The raw sequencing data and de-identified RNA-seq count matrices are available in the Gene Expression Omnibus under accession codes:
-- [GSE255555](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE255555) (KD/MIS-C)
+- [GSE255555](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE255555) (KD vs MIS-C)
 - [GSE255071](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255071), [GSE255073](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255073), [GSE255074](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255074) (TB)
 - [GSE293840](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293840) (ME/CFS)
 
