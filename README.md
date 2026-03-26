@@ -25,6 +25,7 @@ This study evaluates whether large language models (LLMs) can identify diagnosti
 #### CRAN packages
 - magrittr, dplyr, tidyverse, tidyr, tibble, stringr, purrr, broom
 - matrixStats, patchwork, tidytext, ggpubr
+- reshape2, circlize, eulerr, scales, gridExtra
 
 #### Bioconductor packages
 - GSVA, GSEABase, org.Hs.eg.db, AnnotationDbi, limma, DESeq2, edgeR, ComplexHeatmap
@@ -50,7 +51,7 @@ install.packages(c(
   "magrittr", "dplyr", "tidyverse", "tidyr", "tibble",
   "stringr", "purrr", "broom", "matrixStats",
   "patchwork", "tidytext", "ggpubr",
-  "caret", "randomForest", "extraTrees", "glmnet", "nnet"
+  "reshape2", "circlize", "eulerr", "scales", "gridExtra"
 ))
 ```
 
@@ -111,7 +112,7 @@ To reproduce all quantitative results reported in the manuscript, run the two no
 1. `code/fullpipeline_res.ipynb` — full analysis pipeline
 2. `code/ai_figures.ipynb` — figure generation
 
-All input data (gene panels, count matrices, LLM outputs) are included in the `data/` directory. No external data downloads are required.
+All LLM-derived gene panels, aggregated results, and pre-computed outputs are included in the `data/` directory. Count matrices and sample metadata must be downloaded separately from GEO (see [External Data Requirements](#external-data-requirements) below). MSigDB gene set files required for pathway enrichment must also be obtained separately.
 
 ### Running on your own data
 
@@ -153,6 +154,37 @@ Files quantifying prompt adherence: `shortvs_long_length_stats.csv`, `deviation_
 - `long prompts/` — outputs from long prompt experiments
 - `short prompts/short_prompts/` — outputs from short prompt experiments
 
+## External Data Requirements
+
+Some input files are not included in this repository due to size or licensing restrictions and must be obtained separately before running the full analysis.
+
+### Count matrices and sample metadata
+
+Count matrices are available from GEO (see accession codes under [Public Data Availability](#public-data-availability)). Sample metadata, including clinical annotations, are available from the original study publications and their associated GEO deposits. This is a secondary analysis of previously published datasets; primary data sharing responsibility rests with the original publications.
+
+To re-run the upstream DESeq2 and heatmap cells in `ai_figures.ipynb`, download the supplementary count files and sample metadata from GEO, rename them as shown below, and place them in the `data/` directory:
+
+| Cohort | GEO Accession | Download | Rename to |
+|---|---|---|---|
+| KD/MIS-C | [GSE255555](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE255555) | `GSE255555_pedInflam_counts.csv.gz` | `KD_MISC_counts.csv` |
+| TB | [GSE255071](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255071), [GSE255073](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255073), [GSE255074](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255074) | `GSE255071_counts.train.tsv.gz` (+ test/val) | `TB_counts.tsv` |
+| ME/CFS | [GSE293840](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293840) | `GSE293840_raw_counts_all.csv.gz` | `MECFS_counts.tsv` |
+
+Sample metadata (containing clinical annotations) should be obtained from the original study GEO deposits and Series Matrix files, and saved as `KD_MISC_metadata.csv`, `TB_metadata.tsv`, and `MECFS_metadata.tsv` in the `data/` directory.
+
+Pre-computed intermediate results for all analyses are included in the `data/` directory, enabling reproduction of all figures and statistical comparisons without re-running upstream preprocessing.
+
+### MSigDB gene set files
+
+Pathway enrichment analysis in `ai_figures.ipynb` requires gene set files from [MSigDB](https://www.gsea-msigdb.org/gsea/msigdb/). Download the following `.gmt` files (v2023.2, Human Symbols) and place them in `data/gene_sets/`:
+
+- `h.all.v2023.2.Hs.symbols.gmt` (Hallmark)
+- `c2.all.v2023.2.Hs.symbols.gmt` (Curated)
+- `c5.all.v2023.2.Hs.symbols.gmt` (Ontology)
+- `c7.all.v2023.2.Hs.symbols.gmt` (Immunologic)
+
+Registration with MSigDB (free) is required to download these files.
+
 ## Public Data Availability
 
 The raw sequencing data and de-identified RNA-seq count matrices are available in the Gene Expression Omnibus under accession codes:
@@ -163,4 +195,3 @@ The raw sequencing data and de-identified RNA-seq count matrices are available i
 ## License
 
 This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
-
