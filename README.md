@@ -16,7 +16,7 @@ This study evaluates whether large language models (LLMs) can identify diagnosti
 
 ### Software dependencies
 
-- **R** (version 4.3.0 or higher)
+- **R** (version 4.4.1 or higher)
 - **RStudio** (recommended for running `.ipynb` notebooks via R kernel, or Jupyter with IRkernel)
 - **Bioconductor** (version 3.18 or higher)
 
@@ -33,16 +33,18 @@ This study evaluates whether large language models (LLMs) can identify diagnosti
 ### Operating systems
 
 The code has been tested on:
-- macOS Sonoma 14.x (Apple Silicon / M-series)
+- macOS 26.3 (Apple Silicon / M-series)
 - Ubuntu 22.04 LTS
 
 No non-standard hardware is required. All analyses run on a standard desktop or laptop computer.
+
+Package versions used during development are recorded in `code/session_info.txt`.
 
 ## Installation Guide
 
 ### 1. Install R
 
-Download and install R ≥ 4.3.0 from [CRAN](https://cran.r-project.org/).
+Download and install R ≥ 4.4.1 from [CRAN](https://cran.r-project.org/).
 
 ### 2. Install CRAN packages
 
@@ -188,7 +190,7 @@ Registration with MSigDB (free) is required to download these files.
 ## Public Data Availability
 
 The raw sequencing data and de-identified RNA-seq count matrices are available in the Gene Expression Omnibus under accession codes:
-- [GSE255555](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE255555) (KD vs MIS-C)
+- [GSE255555](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE255555) (KD/MIS-C)
 - [GSE255071](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255071), [GSE255073](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255073), [GSE255074](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255074) (TB)
 - [GSE293840](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293840) (ME/CFS)
 
