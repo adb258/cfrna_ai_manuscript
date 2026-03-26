@@ -99,3 +99,69 @@ This notebook generates publication-ready figures, including:
   long prompts/ → outputs from long prompt experiments
   short prompts/short_prompts/ → outputs from short prompt experiments
 
+
+## R Package Requirements
+
+This analysis was conducted in R and requires the following packages.
+
+#### Core Packages
+- magrittr  
+- dplyr  
+- tidyverse  
+- tidyr  
+- tibble  
+- stringr  
+- purrr  
+- broom  
+
+#### Bioconductor Packages
+- GSVA  
+- GSEABase  
+- org.Hs.eg.db  
+- AnnotationDbi  
+- limma  
+- DESeq2  
+- edgeR  
+- ComplexHeatmap  
+
+#### Additional Packages
+- matrixStats  
+- patchwork  
+- tidytext  
+- ggpubr  
+
+
+## Installation Instructions
+
+### 1. Install CRAN packages
+
+```r
+install.packages(c(
+  "magrittr",
+  "dplyr",
+  "tidyverse",
+  "tidyr",
+  "tibble",
+  "stringr",
+  "purrr",
+  "broom",
+  "matrixStats",
+  "patchwork",
+  "tidytext",
+  "ggpubr"
+))
+```
+### 2. Install Bioconductor packages
+```r
+install.packages("BiocManager")
+BiocManager::install(c(
+  "GSVA",
+  "GSEABase",
+  "org.Hs.eg.db",
+  "AnnotationDbi",
+  "limma",
+  "DESeq2",
+  "edgeR",
+  "ComplexHeatmap"
+))
+```
