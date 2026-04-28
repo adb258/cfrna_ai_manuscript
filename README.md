@@ -45,7 +45,7 @@ Package versions used during development are recorded in `code/session_info.txt`
 
 ### 1. Install R
 
-Download and install R ≥ 4.4.1 from [CRAN](https://cran.r-project.org/).
+Download and install R ≥ 4.2.2 from [CRAN](https://cran.r-project.org/).
 
 ### 2. Install CRAN packages
 
@@ -96,7 +96,7 @@ Installation of all dependencies takes approximately **10–20 minutes** on a st
 ### Expected output
 
 Running `fullpipeline_res.ipynb` produces:
-- ROC-AUC distributions for each feature-selection method and classifier (corresponding to Figures 2, S2, and S3 in the manuscript)
+- ROC-AUC distributions for each feature-selection method and classifier (corresponding to Figures 2 and Supplementary Figures 2 and 3 in the manuscript)
 - Accuracy distributions for the end-to-end LLM pipeline comparison (Figure 4B)
 - Aggregated results files (`auc_data_full.csv`, `fullpipeline_all_accuracy.csv`, `master_auc.csv`) written to the `data/` directory
 
