@@ -16,9 +16,9 @@ This study evaluates whether large language models (LLMs) can identify diagnosti
 
 ### Software dependencies
 
-- **R** (version 4.4.1 or higher)
+- **R** (version 4.2.2 or higher)
 - **RStudio** (recommended for running `.ipynb` notebooks via R kernel, or Jupyter with IRkernel)
-- **Bioconductor** (version 3.18 or higher)
+- **Bioconductor** (version 3.16 or higher)
 
 ### R packages
 
@@ -26,6 +26,7 @@ This study evaluates whether large language models (LLMs) can identify diagnosti
 - magrittr, dplyr, tidyverse, tidyr, tibble, stringr, purrr, broom
 - matrixStats, patchwork, tidytext, ggpubr
 - reshape2, circlize, eulerr, scales, gridExtra
+- caret, glmnet, randomForest, extraTrees, nnet
 
 #### Bioconductor packages
 - GSVA, GSEABase, org.Hs.eg.db, AnnotationDbi, limma, DESeq2, edgeR, ComplexHeatmap
@@ -33,7 +34,7 @@ This study evaluates whether large language models (LLMs) can identify diagnosti
 ### Operating systems
 
 The code has been tested on:
-- macOS 26.3 (Apple Silicon / M-series)
+- macOS Sequoia 15.5 (Apple Silicon / M-series)
 - Ubuntu 22.04 LTS
 
 No non-standard hardware is required. All analyses run on a standard desktop or laptop computer.
@@ -53,7 +54,8 @@ install.packages(c(
   "magrittr", "dplyr", "tidyverse", "tidyr", "tibble",
   "stringr", "purrr", "broom", "matrixStats",
   "patchwork", "tidytext", "ggpubr",
-  "reshape2", "circlize", "eulerr", "scales", "gridExtra"
+  "reshape2", "circlize", "eulerr", "scales", "gridExtra",
+  "caret", "glmnet", "randomForest", "extraTrees", "nnet"
 ))
 ```
 
